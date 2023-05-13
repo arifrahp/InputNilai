@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_ui_mobile1"
+    android:backgroundTintMode="screen"
+    tools:context=".DisplayNilai">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/ic_ui_mobilef"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/nim"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/nim"
+            android:layout_width="200dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="5dp"
+            android:autofillHints=""
+            android:foregroundGravity="center_vertical"
+            android:hint=""
+            android:textColor="#666666"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:maxLength="12" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/nama"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/nama"
+            android:layout_width="200dp"
+            android:layout_height="41dp"
+            android:layout_marginBottom="5dp"
+            android:autofillHints=""
+            android:hint=""
+            android:textColor="#666666"
+            android:textAlignment="center"
+            android:inputType="textCapWords" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/kelas"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/kelas"
+            android:layout_width="200dp"
+            android:layout_height="41dp"
+            android:layout_marginBottom="10dp"
+            android:autofillHints=""
+            android:focusableInTouchMode="false"
+            android:hint=""
+            android:textColor="#666666"
+            android:textAlignment="center"
+            android:inputType="textCapWords"
+            android:onClick="pilihKelas" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/nilai_tugas"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/nilai_tugas"
+                    style="@style/Widget.AppCompat.EditText"
+                    android:layout_width="170px"
+                    android:layout_height="46dp"
+                    android:autofillHints="0"
+                    android:hint=""
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/nilai_proses"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/nilai_proses"
+                    android:layout_width="65dp"
+                    android:layout_height="46dp"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="0"
+                    android:hint=""
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="64dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/nilai_uts"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/nilai_uts"
+                    android:layout_width="65dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="0"
+                    android:gravity="center_horizontal"
+                    android:hint=""
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="64dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nilai_uas"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white" />
+
+                <EditText
+                    android:id="@+id/nilai_uas"
+                    android:layout_width="65dp"
+                    android:layout_height="46dp"
+                    android:layout_marginBottom="10dp"
+                    android:autofillHints="0"
+                    android:hint=""
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="64dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nilai_akhir"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/nilai_akhir"
+                android:layout_width="68dp"
+                android:layout_height="41dp"
+                android:layout_marginBottom="20dp"
+                android:autofillHints=""
+                android:enabled="false"
+                android:hint=""
+                android:inputType="numberDecimal"
+                android:textColor="#FFAC2A"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonSimpan"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:onClick="simpan"
+                android:text="@string/simpan_data"
+                app:iconTint="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
